@@ -2,16 +2,27 @@
   "name": "namecheck",
   "version": "1.0.0",
   "description": "Name Availability Checker",
-  "main": "index.js",
+  "main": "namecheck.js",
   "repository": "kozhevnikov/namecheck",
   "author": "Ilya Kozhevnikov <git@kozhevnikov.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "eslint .",
+    "start": "node namecheck.js"
+  },
   "devDependencies": {
     "eslint": "^4.11.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0"
   },
   "eslintConfig": {
-    "extends": "airbnb-base"
+    "extends": "airbnb-base",
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "no-console": "off"
+    }
   }
 }
