@@ -1,0 +1,9 @@
+{
+  "name": "namecheck",
+  "version": "1.0.0",
+  "description": "Name Availability Checker",
+  "main": "index.js",
+  "repository": "kozhevnikov/namecheck",
+  "author": "Ilya Kozhevnikov <git@kozhevnikov.com>",
+  "license": "MIT"
+}
