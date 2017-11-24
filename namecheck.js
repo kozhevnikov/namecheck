@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const { createInterface } = require('readline');
+const github = require('./lib/github');
 const google = require('./lib/google');
 const gmail = require('./lib/gmail');
 const facebook = require('./lib/facebook');
@@ -18,6 +19,7 @@ readline.on('line', async (name) => {
     return;
   }
 
+  await github(name);
   await google(name);
   await gmail(name);
   await facebook(name);
