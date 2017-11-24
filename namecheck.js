@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const { createInterface } = require('readline');
 const gmail = require('./lib/gmail');
+const facebook = require('./lib/facebook');
 
 const readline = createInterface({
   input: process.stdin,
@@ -17,6 +18,8 @@ readline.on('line', async (name) => {
   }
 
   await gmail(name);
+  await facebook(name);
 
+  console.log();
   readline.prompt();
 });
