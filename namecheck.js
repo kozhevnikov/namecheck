@@ -1,21 +1,22 @@
 #!/usr/bin/env node
 const { createInterface } = require('readline');
+const gmail = require('./lib/gmail');
 
 const readline = createInterface({
   input: process.stdin,
   output: process.stdout,
-  prompt: '> '
+  prompt: 'Name: '
 });
 
 readline.prompt();
 
-readline.on('line', (name) => {
+readline.on('line', async (name) => {
   if (!name) {
     readline.close();
     return;
   }
 
-  console.log(`< ${name}`);
+  await gmail(name);
 
   readline.prompt();
 });
