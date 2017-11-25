@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const { createInterface } = require('readline');
+const verisign = require('./lib/verisign');
 const github = require('./lib/github');
 const google = require('./lib/google');
 const gmail = require('./lib/gmail');
@@ -19,11 +20,19 @@ readline.on('line', async (name) => {
     return;
   }
 
-  await github(name);
-  await google(name);
-  await gmail(name);
-  await facebook(name);
+  try {
+    await verisign(name);
+    await github(name);
+    await google(name);
+    await facebook(name);
+    await gmail(name);
+  }
+  catch (error) {
+    console.log(error);
+  }
 
   console.log();
   readline.prompt();
 });
+
+readline.on('close', () => console.log());

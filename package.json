@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "test": "eslint .",
-    "start": "node namecheck.js"
+    "start": "nodemon namecheck.js"
   },
   "dependencies": {
     "colors": "^1.1.2",
@@ -17,7 +17,8 @@
   "devDependencies": {
     "eslint": "^4.11.0",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.12.1"
   },
   "eslintConfig": {
     "extends": "airbnb-base",
