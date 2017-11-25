@@ -7,4 +7,4 @@ npm install
 npm start
 ```
 
-[[https://github.com/kozhevnikov/namecheck/blob/master/docs/namecheck.gif|alt=namecheck]]
+![namecheck](https://raw.githubusercontent.com/kozhevnikov/namecheck/master/docs/namecheck.gif)
