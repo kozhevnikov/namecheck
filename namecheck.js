@@ -28,8 +28,7 @@ readline.on('line', async (name) => {
     await twitter(name);
     await facebook(name);
     await gmail(name);
-  }
-  catch (error) {
+  } catch (error) {
     console.log(error);
   }
 
