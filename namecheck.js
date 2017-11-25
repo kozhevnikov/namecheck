@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 const { createInterface } = require('readline');
-const verisign = require('./lib/verisign');
-const github = require('./lib/github');
-const google = require('./lib/google');
-const gmail = require('./lib/gmail');
 const facebook = require('./lib/facebook');
+const github = require('./lib/github');
+const gmail = require('./lib/gmail');
+const google = require('./lib/google');
+const twitter = require('./lib/twitter');
+const verisign = require('./lib/verisign');
 
 const readline = createInterface({
   input: process.stdin,
@@ -24,6 +25,7 @@ readline.on('line', async (name) => {
     await verisign(name);
     await github(name);
     await google(name);
+    await twitter(name);
     await facebook(name);
     await gmail(name);
   }
